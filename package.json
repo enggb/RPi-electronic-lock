@@ -1,0 +1,19 @@
+{
+  "name": "RPi-electronic-lock",
+  "version": "0.0.1",
+  "description": "door lock control panel with node js",
+  "main": "doorController-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bhoopesh Singh",
+  "license": "ISC",
+  "dependencies": {
+    "bonjour": "^3.5.0",
+    "express": "^4.16.4",
+    "jsonminify": "^0.4.1",
+    "keypress": "^0.2.1",
+    "uuid": "^3.3.2",
+    "ws": "^6.1.0"
+  }
+}
