@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODEBIN="/usr/bin/node"
+NODEBIN="/usr/local/bin/node"
 PROG="/home/pi/RPi-electronic-lock/doorController-server-rasp.js"
 LOGS="/tmp/doorlock.log"
 
