@@ -34,8 +34,11 @@ echo "#!/bin/sh
 $NODE_BIN $PWD/doorController-client-host.js open_door > /tmp/doorlock.log &" > $PROG
 output "Door controller client successfully installed!"
 npm install
+
 output "Creating custom key binding..."
+
 /bin/bash ./create-key-binding.sh
+
 if [ $? -ne 0 ]; then
 	error "Failed to bind the key. Please correct the error and try again!"
 else
