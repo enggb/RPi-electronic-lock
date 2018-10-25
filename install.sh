@@ -39,5 +39,5 @@ output "Creating custom key binding..."
 if [ $? -ne 0 ]; then
 	error "Failed to bind the key. Please correct the error and try again!"
 else
-	output "Fire away. Open door with <Shift><Ctrl><Alt>W"
+	output "Fire away. Open door with <Shift><Ctrl>G"
 fi
