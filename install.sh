@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ];then
+    echo "Please run as root"
+    exit
+fi
+
 bold=$(tput bold)
 red=`tput setaf 1`
 green=`tput setaf 2`
@@ -31,4 +36,8 @@ output "Door controller client successfully installed!"
 npm install
 output "Creating custom key binding..."
 /bin/bash ./create-key-binding.sh
-output "Fire away. Open door with <Shift><Ctrl>W"
+if [ $? -ne 0 ]; then
+	error "Failed to bind the key. Please correct the error and try again!"
+else
+	output "Fire away. Open door with <Shift><Ctrl><Alt>W"
+fi
